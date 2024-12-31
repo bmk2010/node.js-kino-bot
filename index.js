@@ -14,7 +14,7 @@ bot.on("message", (msg) => {
   if (msg.text === "/start") {
     bot.sendMessage(
       userId,
-      "<b>👋 Salom basharenga ski, men kino topar botman. Kinoni topish uchun uning kodini kiriting ...</b>",
+      "<b>👋 Salom men kino topar botman. Kinoni topish uchun uning kodini kiriting ...</b>",
       {
         parse_mode: "HTML",
       }
@@ -25,9 +25,9 @@ bot.on("message", (msg) => {
     if (isNaN(movieCode)) {
       bot.sendMessage(userId, "😔 Iltimos faqat son kiriting");
     } else {
-      promises
-        .readFile("./baza.json", "utf-8")
-        .then((res) => JSON.parse(res))
+      
+        fetch("https://brevdsbbsdjhbjdsvbjhsdvbjhdsvbjhbdvsjhbjhvdsh.vercel.app/baza.json")
+        .then((res) => res.json())
         .then((data) => {
           const userCinema = data.find((kino) => kino.code === movieCode);
 
