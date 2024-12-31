@@ -14,7 +14,7 @@ bot.on("message", (msg) => {
   if (msg.text === "/start") {
     bot.sendMessage(
       userId,
-      "<b>👋 Salom men kino topar botman. Kinoni topish uchun uning kodini kiriting ...</b>",
+      "<b>👋 Salom basharenga ski, men kino topar botman. Kinoni topish uchun uning kodini kiriting ...</b>",
       {
         parse_mode: "HTML",
       }
