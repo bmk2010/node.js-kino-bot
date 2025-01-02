@@ -1,6 +1,5 @@
 const TelegramBot = require("node-telegram-bot-api");
-const TOKEN = "YOUR_BOT_TOKEN"; // Tokenni yangilangan token bilan almashtiring
-const CHAT_ID = "YOUR_CHAT_ID"; // Kerak bo‘lsa, xabar yuboriladigan chat ID ni qo‘shing
+const TOKEN = "8073312360:AAFMOQn875MoAuwbI-q0fhs76WeD2n2ErgM"; // Tokenni yangilangan token bilan almashtiring
 const URL = "https://your-vercel-deployment-url.vercel.app"; // Vercel URL (har qanday Vercel URL manzilingizga almashtiring)
 
 const bot = new TelegramBot(TOKEN);
