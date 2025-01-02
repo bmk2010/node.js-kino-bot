@@ -1,9 +1,5 @@
 const TelegramBot = require("node-telegram-bot-api");
-const { promises } = require("fs");
-const api = require("express");
 const TOKEN = "8073312360:AAFMOQn875MoAuwbI-q0fhs76WeD2n2ErgM";
-
-const server = api();
 
 const bot = new TelegramBot(TOKEN, { polling: true });
 
@@ -25,8 +21,7 @@ bot.on("message", (msg) => {
     if (isNaN(movieCode)) {
       bot.sendMessage(userId, "😔 Iltimos faqat son kiriting");
     } else {
-      
-        fetch("https://brevdsbbsdjhbjdsvbjhsdvbjhdsvbjhbdvsjhbjhvdsh.vercel.app/baza.json")
+      fetch("https://brevdsbbsdjhbjdsvbjhsdvbjhdsvbjhbdvsjhbjhvdsh.vercel.app/baza.json")
         .then((res) => res.json())
         .then((data) => {
           const userCinema = data.find((kino) => kino.code === movieCode);
@@ -50,11 +45,3 @@ bot.on("message", (msg) => {
     }
   }
 });
-
-// Default endpoint to handle requests
-server.all("*", (req, res) => {
-  res.send("Bot server ishlamoqda. Bot Telegram orqali javob beradi.");
-});
-
-// Exporting the handler for Vercel
-module.exports = server;
