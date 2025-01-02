@@ -1,13 +1,7 @@
 {
   "functions": {
-    "index.js": {
+    "api/index.js": {
       "runtime": "vercel-node@1.0.0"
     }
-  },
-  "routes": [
-    {
-      "src": "/webhook",
-      "dest": "/index.js"
-    }
-  ]
+  }
 }
