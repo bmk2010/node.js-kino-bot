@@ -1,11 +1,7 @@
 const TelegramBot = require("node-telegram-bot-api");
-const TOKEN = "8073312360:AAFMOQn875MoAuwbI-q0fhs76WeD2n2ErgM"; // Tokenni yangilangan token bilan almashtiring
-const URL = "https://casjncasnkjnsaknjsanicaisjbcsaijnicsia.vercel.app"; // Vercel URL (har qanday Vercel URL manzilingizga almashtiring)
+const TOKEN = "8073312360:AAFMOQn875MoAuwbI-q0fhs76WeD2n2ErgM";
 
-const bot = new TelegramBot(TOKEN);
-
-// Webhookni o'rnatish
-bot.setWebHook(`${URL}/webhook`);
+const bot = new TelegramBot(TOKEN, { polling: true });
 
 bot.on("message", (msg) => {
   const userId = msg.chat.id;
@@ -15,7 +11,9 @@ bot.on("message", (msg) => {
     bot.sendMessage(
       userId,
       "<b>👋 Salom men kino topar botman. Kinoni topish uchun uning kodini kiriting ...</b>",
-      { parse_mode: "HTML" }
+      {
+        parse_mode: "HTML",
+      }
     );
   } else {
     const movieCode = Number(userCode.trim());
