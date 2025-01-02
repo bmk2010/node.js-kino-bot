@@ -1,6 +1,6 @@
 const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = "8073312360:AAFMOQn875MoAuwbI-q0fhs76WeD2n2ErgM"; // Tokenni yangilangan token bilan almashtiring
-const URL = "https://your-vercel-deployment-url.vercel.app"; // Vercel URL (har qanday Vercel URL manzilingizga almashtiring)
+const URL = "https://casjncasnkjnsaknjsanicaisjbcsaijnicsia.vercel.app"; // Vercel URL (har qanday Vercel URL manzilingizga almashtiring)
 
 const bot = new TelegramBot(TOKEN);
 
