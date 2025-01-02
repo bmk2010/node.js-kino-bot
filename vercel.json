@@ -1,0 +1,14 @@
+{
+    "functions": {
+      "index.js": {
+        "runtime": "nodejs18.x"
+      }
+    },
+    "routes": [
+      {
+        "src": "/webhook",
+        "dest": "/index.js"
+      }
+    ]
+  }
+  
